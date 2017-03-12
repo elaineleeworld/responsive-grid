@@ -65,11 +65,29 @@ img {
 }*/
 
 @media (max-width: 667px) {
+	[class*='item-1'] {
+		width: 100%;
+	}
 	[class*='item-2'] {
 		width: 50%;
 	}
+}
+
+@media (min-width: 667px) {
 	[class*='item-1'] {
-		width: 100%;
+		width: 50%;
+	}
+	[class*='item-2'] {
+		width: 25%;
+	}
+}
+
+@media (min-width: 960px) {
+	[class*='item-1'] {
+		width: 40%;
+	}
+	[class*='item-2'] {
+		width: 20%;
 	}
 }
 

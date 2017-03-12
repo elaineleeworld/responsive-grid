@@ -1,0 +1,75 @@
+* {
+	box-sizing:border-box;
+	
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	color: black;
+	font-size:40px;
+	border: 2px solid green;
+}
+
+.grid-container {
+	width:100%;
+	max-width:960px;
+	margin: 0 auto;
+	/*border: 2px solid blue;*/
+	display: grid;
+	/*grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 30vh;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;*/
+}
+
+/*-- our clearfix hack for parent element of grid-items -- */ 
+ /*.row:before, 
+ .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+ }*/
+
+/*applies to all grid-items and item-2*/
+[class*='grid-item'] {
+	float: left;
+	border: 2px solid white;
+	height: 200px;
+	width:20%;
+	background: url('http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-21.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+}
+
+img {
+	width: 100%;
+	display:inline-block;
+
+}
+
+/*applies to all grid-items and item-1*/
+.item-1, .item-12, .item-20, .item-30 {
+	width: 40%;
+	background: url('https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/The-stages-of-puppy-growth.jpg?itok=9ptPJwY8');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+}
+
+/*@media (max-width: 667px) {
+	[class*='item'] {
+		width: 25%;
+	}
+}*/
+
+@media (max-width: 667px) {
+	[class*='item-2'] {
+		width: 50%;
+	}
+	[class*='item-1'] {
+		width: 100%;
+	}
+}
+
